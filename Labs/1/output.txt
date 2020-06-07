@@ -1,0 +1,5 @@
+Name: Smith 
+Assignment: 70 
+Quizzes: -474027376 
+Final exam: 75 
+Total: 323
