@@ -3,12 +3,13 @@ This program is written by: Joanna Folk */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "leak_detector_c.h"
 
 
 typedef struct customer {
     char name[9];
     int item_count;
-    int line_num;
+    int line_num; 
     long entering_time;
 } customer;
 
@@ -105,6 +106,7 @@ customer *findNextCustomer(cqueue lines[], long *currentTime) {
 }
 
 int main() {
+    atexit(report_mem_leak);
     FILE *IN, *OUT;
     const int numberLines = 12;
     int num_cases;
